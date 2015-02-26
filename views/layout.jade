@@ -8,6 +8,20 @@ html
     title= path
     link(rel='stylesheet', href='css/master.css')
   body
-    block content
-
+    include ./partial/_left
+    #right
+      block content
+      footer
+        div 
+          | Musée du Bouton
+          br
+          | Haute Ferme du Vert Pays
+        div
+          | 31, chemin de Reinach
+          | 1687 Estévenens-dessus
+        div
+          | Tél. 026 652 36 34
+          | nicoladp@bluewin.ch
+        div 
+          a(href="#download") Télécharger le plan
   script(data-main="js/main", src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js")

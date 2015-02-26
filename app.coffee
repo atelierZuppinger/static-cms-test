@@ -3,16 +3,17 @@ rupture      = require 'rupture'
 autoprefixer = require 'autoprefixer-stylus'
 contentful   = require 'roots-contentful'
 slug         = require 'slug'
+jeet         = require 'jeet'
 
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore']
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [axis(), rupture(), autoprefixer(), jeet()]
 
   jade:
     pretty: true
-  
+
   extensions: [
     contentful
       access_token: 'eb2f7ed24d0f0dfc16e1a13f475447746150bd843aacae73ff48ae812b0b1992'
