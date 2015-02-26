@@ -9,7 +9,7 @@
     "js-pipeline": "0.2.x",
     "jade": "1.x",
     "marked": "0.3.x",
-    "roots": "3.0.0-rc.10",
+    "roots": "3.0.1",
     "roots-contentful": "0.0.6",
     "rupture": "0.6.x",
     "ship": "0.2.x",
