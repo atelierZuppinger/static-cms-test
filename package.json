@@ -10,11 +10,13 @@
     "jeet": "^6.1.2",
     "js-pipeline": "0.2.x",
     "marked": "0.3.x",
+    "normalize.css": "^3.0.2",
+    "reset.styl": "^0.1.1",
     "roots": "3.0.1",
     "roots-contentful": "0.0.6",
     "rupture": "0.6.x",
     "ship": "0.2.x",
     "slug": "^0.8.0",
-    "stylus": "0.49.x"
+    "stylus": "0.50.x"
   }
 }

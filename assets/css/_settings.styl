@@ -1,6 +1,16 @@
 // Axis Settings (http://roots.cx/axis)
 
 // font stack (add your own!)
+@font-face 
+    font-family 'laurenscriptregular'
+    src url('../fonts/laurenscript-webfont.eot')
+    src url('../fonts/laurenscript-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/laurenscript-webfont.woff') format('woff'),
+        url('../fonts/aurenscript-webfont.ttf') format('truetype'),
+        url('../fonts/laurenscript-webfont.svg#laurenscriptregular') format('svg')
+    font-weight normal
+    font-style normal
+
 helvetica-neue = "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif
 helvetica = "Helvetica Neue", Helvetica, Arial, sans-serif
 georgia = Georgia, Cambria, "Times New Roman", Times, serif
@@ -10,12 +20,22 @@ verdana = Verdana, Geneva, sans-serif
 
 // default font stack
 font-stack = helvetica-neue
-font-size = 16
+font-size = 11px
 font-color = #555
+fontsize = {
+  h1: n,
+  h2: 25px,
+  h3: 20px,
+  h4: 16px,
+  p: 14px
+}
 
 // colors (via http://clrs.cc - slightly modded)
 red = #bd0926
+greyLight = #b1b2b4
+grey = #868789
 greyDark = #3d3d3f
+black = #1a171b
 
 // default color
 default-color = red
@@ -27,11 +47,11 @@ highlight-color = red
 ligatures = false
 
 // vertical rhythm
-base-line-height = 24px
-default-rhythm-border-style = solid
+base-line-height = fontsize.p * 1.5
+border = 1px solid greyLight
 relative-font-sizing = true
 round-to-nearest-half-line = false
-min-line-padding = 2px
+padding = 3px
 gutter = 32px
 
 // custom image base path for roots mixins
