@@ -1,3 +1,4 @@
+block vars
 doctype html
 html
   head
@@ -7,10 +8,11 @@ html
     meta(name='author', content= "author of the site")
     title= path
     link(rel='stylesheet', href='css/master.css')
-  body
+  body(class= bodyClass ? bodyClass : '')
     include ./partial/_left
     #right
-      block content
+      #content
+        block content
       footer
         #footer-container
           div 
@@ -19,9 +21,11 @@ html
             | Haute Ferme du Vert Pays
           div
             | 31, chemin de Reinach
+            br
             | 1687 Estévenens-dessus
           div
             | Tél. 026 652 36 34
+            br
             | nicoladp@bluewin.ch
           div 
             a.light(href="#download") Télécharger le plan

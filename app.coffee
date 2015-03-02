@@ -14,6 +14,9 @@ module.exports =
   jade:
     pretty: true
 
+  server:
+    clean_urls: true
+
   extensions: [
     contentful
       access_token: 'eb2f7ed24d0f0dfc16e1a13f475447746150bd843aacae73ff48ae812b0b1992'
