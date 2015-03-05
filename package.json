@@ -1,6 +1,6 @@
 {
-  "name": "static-cms-test",
-  "description": "Testing static-cms sprout template",
+  "name": "museedubouton.ch",
+  "description": "CMS avec contentful et Roots v3",
   "dependencies": {
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
