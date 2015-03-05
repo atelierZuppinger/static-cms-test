@@ -4,6 +4,7 @@
   "dependencies": {
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
+    "client-templates": "^0.2.0",
     "coffee-script": "1.8.x",
     "css-pipeline": "0.2.x",
     "jade": "1.x",
@@ -11,8 +12,10 @@
     "js-pipeline": "0.2.x",
     "marked": "0.3.x",
     "normalize.css": "^3.0.2",
+    "page": "^1.6.1",
     "reset.styl": "^0.1.1",
     "roots": "3.0.1",
+    "roots-browserify": "^0.3.2",
     "roots-contentful": "0.0.6",
     "rupture": "0.6.x",
     "ship": "0.2.x",
