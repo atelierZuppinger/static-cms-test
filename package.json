@@ -4,8 +4,11 @@
   "dependencies": {
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.3",
     "client-templates": "^0.2.0",
     "coffee-script": "1.8.x",
+    "coffeeify": "^1.0.0",
     "css-pipeline": "0.2.x",
     "jade": "1.x",
     "jeet": "^6.1.2",
@@ -21,5 +24,9 @@
     "ship": "0.2.x",
     "slug": "^0.8.0",
     "stylus": "0.50.x"
+  },
+  "browserify-shim": {
+    "./assets/js/snack/snack.js": "snack",
+    "./assets/js/snack/snack-slick.js": "slick"
   }
 }

@@ -1,10 +1,13 @@
-axis         = require 'axis'
-rupture      = require 'rupture'
-autoprefixer = require 'autoprefixer-stylus'
-contentful   = require 'roots-contentful'
-slug         = require 'slug'
-jeet         = require 'jeet'
-browserify   = require 'roots-browserify'
+axis             = require 'axis'
+rupture          = require 'rupture'
+autoprefixer     = require 'autoprefixer-stylus'
+contentful       = require 'roots-contentful'
+slug             = require 'slug'
+jeet             = require 'jeet'
+browserify       = require 'roots-browserify'
+browserifyShim   = require 'browserify-shim'
+coffeeify        = require 'coffeeify'
+
 #ClientTemplates = require 'client-templates'
 
 module.exports =
@@ -21,9 +24,9 @@ module.exports =
 
   extensions: [
     browserify
-      external: 'assets/js/MooTools-Core-1.5.1.js'
       files: 'assets/js/main.coffee'
       out: 'js/build.js'
+      transforms: [browserifyShim, coffeeify]
     contentful
       access_token: 'eb2f7ed24d0f0dfc16e1a13f475447746150bd843aacae73ff48ae812b0b1992'
       space_id: '02l6hl9fkby0'

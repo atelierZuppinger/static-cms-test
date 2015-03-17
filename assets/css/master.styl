@@ -154,11 +154,21 @@ img
     .more
       display none
       position relative
-      &:before
-        content 'fermer'
+      .close
         display block
+        cursor pointer
         position absolute
-        top 0
+        top - padding * 3
+        border 0
+        background greyDark2
         right 0
-        
-
+        font-style italic
+        color greyLight
+        padding-left padding
+    &.opened
+      .viewmore
+        display none
+      .more
+        border-top 1px solid greyLight
+        padding-top padding*2
+        display block
