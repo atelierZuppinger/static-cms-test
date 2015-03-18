@@ -10,7 +10,7 @@ page '/programme', (context, next) ->
     next()
     evt = snack.wrap('#'+context.hash)
     if evt[0] instanceof HTMLElement
-        evt.toggleClass('opened')
+        evt.addClass('opened')
     else
         snack.wrap('.event').removeClass('opened')
 page '/galeries/:galerie', (context, next) ->
