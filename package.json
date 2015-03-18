@@ -27,6 +27,6 @@
   },
   "browserify-shim": {
     "./assets/js/snack/snack.js": "snack",
-    "./assets/js/snack/snack-slick.js": "slick"
+    "./assets/js/snack/snack-slick.js": "snack"
   }
 }
