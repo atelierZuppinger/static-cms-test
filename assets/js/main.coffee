@@ -2,9 +2,13 @@ page = require 'page'
 snack = require './snack/snack.js'
 require './snack/snack-slick.js'
 
-showHide = (e) -> 
-    evt = snack.wrap '! .event', e.target
-    evt.toggleClass 'opened'
+# router
+page '/programme', (context, next) ->
+    evt = snack.wrap('#'+context.hash)
+    if evt[0] instanceof HTMLElement
+        evt.toggleClass('opened')
+    else
+        snack.wrap('.event').removeClass('opened')
 
 # use Slick to select element with snack.wrap
 snack.wrap.defineEngine (selector, context) ->
@@ -19,7 +23,6 @@ snack.wrap.define 'toggleClass', (className) ->
         else
             snack.wrap(element).addClass className
 
+
 snack.ready () -> 
-    triggers = snack.wrap '.viewmore, .more'
-    triggers.each (element,index) ->
-        snack.wrap(element).attach 'click', showHide
+    page.start()
