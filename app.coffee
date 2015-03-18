@@ -19,6 +19,9 @@ module.exports =
   jade:
     pretty: true
 
+  locals:
+    slug: slug
+
   server:
     clean_urls: true
 
@@ -28,14 +31,14 @@ module.exports =
       out: 'js/build.js'
       transforms: [browserifyShim, coffeeify]
     contentful
-      access_token: 'eb2f7ed24d0f0dfc16e1a13f475447746150bd843aacae73ff48ae812b0b1992'
-      space_id: '02l6hl9fkby0'
+      access_token: '45565d5aeb936c032b79022363f299398c15f031f43f398aa1665e4c1b417ecf'
+      space_id: 'icf42ioqrb6x'
       content_types: [
         {
-          id: 'TIXX1GyfeMSGWUikyGmkC'
-          name: 'project'
-          template: 'views/_project.jade'
-          path: (e) -> "projects/#{slug(e.categorie.fields.nom)}/#{slug(e.titre)}"
+          id: '7leLzv8hW06amGmke86y8G'
+          name: 'photoGallery'
+          template: 'views/_galerie.jade'
+          path: (e) -> "galeries/#{e.slug}"
         }
       ]
   ]
