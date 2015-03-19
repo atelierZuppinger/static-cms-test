@@ -64,6 +64,19 @@ img
   position fixed
   background-color alpha(white, .9)
   z-index 12
+  #mobile-nav
+    display none
+    text-align center
+    > a
+      display inline-block
+    nav
+      padding-top padding*2
+      a
+        padding 0 padding
+        display block
+        &:before
+          content '๏ '
+          
   +above(responsive.wide)
     span(1/4)
   +below(responsive.medium)
@@ -76,6 +89,10 @@ img
   +below(responsive.small)
     .left, .right
       col(1)
+    #mobile-nav
+      display block
+    #desktop-nav
+      display none
   &:before
     content ''
     position absolute
@@ -140,6 +157,8 @@ img
       padding 0 gutter
       div
         span(1/4)
+        +below(responsive.small)
+          span(1/2)
     a
       font-size: fontsize.small
       text-decoration underline
@@ -210,10 +229,17 @@ img
         display block
         
 .diaporama
-  +below(responsive.medium)
-    #right
-      footer
+  #left
+    +below(responsive.small)
+      #mobile-nav 
+        display none
+      #desktop-nav
+        display block
+  #right
+    footer
+      +at(responsive.medium)
         position fixed
+
 .galeries
   #right
     img 

@@ -1,31 +1,39 @@
 #left
   .mask
     #menu-container
-      .left
-        a#logo(href='/')
+      #desktop-nav
+        .left
+          a#logo(href='/')
+            img(src='/img/logo-musee-du-bouton.png',alt='Logo musée du bouton')
+          p.description 
+            | Le Musée du Bouton est un petit musée privé dans la belle campagne glânoise. Une très vieille ferme fribourgeoise en bois (1727) sert d’écrin à une belle collection de boutons, pour la plupart sortis des boîtes à boutons et ouvrages de nos grand-mamans.
+          a(href='/description') En savoir plus
+        #menu.right
+          h3 Actualités
+          p
+            | Le musée est actuellement fermé 
+            | pour sa pause hivernale.
+            br 
+            strong Réouverture samedi 4 avril 2015
+          a(href="/programme") Programme et horaires
+          h3.red Exposition extraordinaire
+          h4
+            | Le musée sort de ses murs
+          p 
+            | Une première mise en mouvement 
+            | du musée hors de ses murs.
+          h5 Le 28 Mars 2015 à 15h
+          p Hall du Hôme du HFR de Billens (FR).
+          a(href="/programme#sort-de-ses-murs") En savoir plus
+          h3 Galeries
+          p 
+            | Découvrez par l’image l’univers du musée 
+            | et de la Haute ferme du Vert Pays
+          a(href="/galeries") Voir les images
+      #mobile-nav
+        a(href="/")
           img(src='/img/logo-musee-du-bouton.png',alt='Logo musée du bouton')
-        p.description 
-          | Le Musée du Bouton est un petit musée privé dans la belle campagne glânoise. Une très vieille ferme fribourgeoise en bois (1727) sert d’écrin à une belle collection de boutons, pour la plupart sortis des boîtes à boutons et ouvrages de nos grand-mamans.
-        a(href='/description') En savoir plus
-      #menu.right
-        h3 Actualités
-        p
-          | Le musée est actuellement fermé 
-          | pour sa pause hivernale.
-          br 
-          strong Réouverture samedi 4 avril 2015
-        a(href="/programme") Programme et horaires
-        h3.red Exposition extraordinaire
-        h4
-          | Le musée sort de ses murs
-        p 
-          | Une première mise en mouvement 
-          | du musée hors de ses murs.
-        h5 Le 28 Mars 2015 à 15h
-        p Hall du Hôme du HFR de Billens (FR).
-        a(href="/programme#sort-de-ses-murs") En savoir plus
-        h3 Galeries
-        p 
-          | Découvrez par l’image l’univers du musée 
-          | et de la Haute ferme du Vert Pays
-        a(href="/galeries") Voir les images
+        nav
+          a(href="/description") Présentation
+          a(href="/programme") Programme et horaires
+          a(href="/galeries") Voir les images
