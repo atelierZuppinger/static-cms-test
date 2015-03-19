@@ -3,6 +3,12 @@ zeptoBrowserify = require 'zepto-browserify'
 $ = zeptoBrowserify.$
 diaporama = require './diaporama.coffee'
 
+checkSize = (e) ->
+    if $(window).height() < $('#right').height()
+        $('body').addClass('scroll')
+    else
+        $('body').removeClass('scroll')
+
 # router
 page '/', (context, next) ->
     next()
@@ -17,11 +23,14 @@ page '/programme', (context, next) ->
 page '/galeries/:galerie', (context, next) ->
     next()
     container = $('#imageContainer')[0]
-    img = $('#' + context.hash + ' img') if context.hash
+    img = $('#' + context.hash + 'find img') if context.hash
     container.src = img[0].dataset.originalHref + '?w=500' if img
 
 $ () -> 
     page.start()
    
-$(window).on 'hashchange', () ->
-    page()
+$ window
+    .on 'hashchange', (e) ->
+        page()
+    .on 'resize', checkSize
+    .on 'load', checkSize

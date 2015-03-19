@@ -12,6 +12,6 @@ block content
         #browseImages
             .container(style='width:' + entry.images.length * (thumbWidth+thumbMargin) + 'px')
                 each image in entry.images
-                    a(href="#" + locals.slug( image.fields.title), id=locals.slug( image.fields.title))
+                    a(href="#" + locals.slug( image.fields.title), id=locals.slug( image.fields.title)+'find')
                         img(src=image.fields.photo.fields.file.url + '?w=' + thumbWidth + '&h=100&fit=thumb', data-original-href=image.fields.photo.fields.file.url)
         img#imageContainer(src=entry.images[0].fields.photo.fields.file.url + '?w=500', alt=entry.images[0].fields.title)
