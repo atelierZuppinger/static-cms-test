@@ -11,6 +11,12 @@
         width 100%
         position absolute
         opacity 0
-        transition opacity 2s ease
-        &.active, &:first-child
+        transition opacity 5s ease
+        &.active
             opacity 1
+    +below(responsive.medium)
+        position relative
+        top auto
+        left auto
+        height 200px
+            
