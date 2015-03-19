@@ -73,6 +73,9 @@ img
       margin 0
       padding 0 !important
       col(1/2)
+  +below(responsive.small)
+    .left, .right
+      col(1)
   &:before
     content ''
     position absolute
@@ -118,7 +121,7 @@ img
   +above(responsive.wide)
     span(ratio:3/4,offset:1/4)
   +below(responsive.medium)
-    span(ratio:1)
+    span(ratio:1)    
   footer
     cf()
     width (100% * 2/3)
@@ -143,6 +146,8 @@ img
       font-style normal
   #content
     padding gutter*2 gutter 0 gutter
+    +below(responsive.medium)
+      padding-top gutter
     h1, h2, h3
       color orange
     h4
@@ -169,10 +174,16 @@ img
       &.full
         width 100%
   .col
+    &.full
+      col(ratios: 1)
+      +above(responsive.wide)
+        col(ratios: 4/5)
     &.half
       col(ratios: 1/2)
       +above(responsive.wide)
         col(ratios:2/5)
+      +below(responsive.small)
+        col(1)
   .event
     border-bottom 1px solid greyLight
     margin-bottom padding*2
@@ -217,3 +228,6 @@ img
         img
           float left
           margin-bottom 0
+          margin-right 3px
+    #imageContainer
+      width 100%

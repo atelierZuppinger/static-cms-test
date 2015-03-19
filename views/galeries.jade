@@ -5,10 +5,10 @@ block vars
   - var title = 'Galeries'
     
 block content
-    h1 Galeries
-    each photoGalery in contentful.photoGallery
-        .photoGallery
-            a(href='/galeries/' + photoGalery.slug)
-                h2= photoGalery.title
-                img(src=photoGalery.coverImage.fields.file.url + '?w=900')
-            
+    .col.full
+        h1 Galeries
+        each photoGalery in contentful.photoGallery
+            .photoGallery
+                a(href='/galeries/' + photoGalery.slug)
+                    h2= photoGalery.title
+                    img(src=photoGalery.coverImage.fields.file.url + '?w=900')

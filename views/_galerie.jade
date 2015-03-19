@@ -4,13 +4,14 @@ block vars
     - var bodyClass = 'galerie'
     - var titre = entry.title
     - var thumbWidth = 100
+    - var thumbMargin = 3
 
 block content
-    // - console.log(photoGallery)
-    h1= entry.title
-    #browseImages
-        .container(style='width:' + entry.images.length * thumbWidth + 'px')
-            each image in entry.images
-                a(href="#!" + locals.slug( image.fields.title))
-                    img(src=image.fields.photo.fields.file.url + '?w=' + thumbWidth + '&h=100&fit=thumb', data-original-href=image.fields.photo.fields.file.url)
-    img#imageContainer(src=entry.images[0].fields.photo.fields.file.url + '?w=500', alt=entry.images[0].fields.title)
+    .col.full
+        h1= entry.title
+        #browseImages
+            .container(style='width:' + entry.images.length * (thumbWidth+thumbMargin) + 'px')
+                each image in entry.images
+                    a(href="#!" + locals.slug( image.fields.title))
+                        img(src=image.fields.photo.fields.file.url + '?w=' + thumbWidth + '&h=100&fit=thumb', data-original-href=image.fields.photo.fields.file.url)
+        img#imageContainer(src=entry.images[0].fields.photo.fields.file.url + '?w=500', alt=entry.images[0].fields.title)

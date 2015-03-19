@@ -8,6 +8,9 @@ html
     meta(name='author', content= "author of the site")
     title= titre + ' ٭ Musée du bouton'
     link(rel='stylesheet', href='/css/master.css')
+    <!--[if IE 8]>
+    link(rel='stylesheet', href='/css/master-ie.css')
+    <![endif]-->
   body(class= bodyClass ? bodyClass : '')
     block diaporama
     include ./partial/_left
