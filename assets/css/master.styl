@@ -33,7 +33,7 @@ h3, h2, .h2
   color grey
   &.red
     color red
-h4
+h4, .h4
   font-family arial
   font-weight bold
   font-size: fontsize.h4
@@ -181,6 +181,8 @@ img
       margin-bottom padding*2
       display block
       font-size: fontsize.small
+    datetime
+      color orange
     h4, p
       color white
     h2, .h2
@@ -218,10 +220,13 @@ img
         display block
         cursor pointer
         position absolute
-        top - padding * 3
+        top - padding * 4
         border 0
         background greyDark2
-        right 0
+        right 50%
+        width 80px
+        margin-right -40px
+        text-align center
         font-style italic
         color greyLight
         padding-left padding
@@ -229,7 +234,7 @@ img
       .viewmore
         display none
       .more
-        border-top 1px solid greyLight
+        border-top 1px dotted greyLight
         padding-top padding*2
         display block
         
